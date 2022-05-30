@@ -1,0 +1,32 @@
+img {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.content{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.courseDiv:hover {
+  cursor: pointer;
+  border: 2px solid lightblue;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0);
+}
+
+.course_content {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+  font-family: cursive;
+
+}
