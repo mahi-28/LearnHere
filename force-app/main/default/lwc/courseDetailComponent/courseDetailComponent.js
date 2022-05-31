@@ -33,6 +33,7 @@ export default class CourseDetailComponent extends LightningElement {
     fetchCourseDetails({ recordId: this.courseId })
        .then(result => {
          console.log('Result', result);
+         console.log("location", result);
          this.__courseDetails = result;
        })
        .catch(error => {

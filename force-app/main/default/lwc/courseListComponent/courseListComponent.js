@@ -14,7 +14,7 @@ export default class CourseListComponent extends NavigationMixin(LightningElemen
     if (data) {
       //console.log('Upcoming courses Data', data);
       this.UpcomingCourses = data;
-      console.log("Upcoming data",data);
+      //console.log("Upcoming data",data);
     } else if (error) {
       //console.error('Upcoming courses Error:', error);
       this.UpcomingCourses = undefined;
@@ -27,7 +27,7 @@ export default class CourseListComponent extends NavigationMixin(LightningElemen
     if (data) {
       //console.log('Past courses Data', data);
       this.PastCourses = data;
-      console.log("Past data",data);
+      //console.log("Past data",data);
     } else if (error) {
       //console.error(' Past courses Error:', error);
       this.PastCourses = undefined;

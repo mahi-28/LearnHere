@@ -15,10 +15,21 @@
 }
 
 .courseDetails {
-  margin-top: 15px;
-  background-color: aliceblue;
+  margin-top: 0px;
   font-family: sans-serif;
-  border-radius: 10px;
   font-size: 20px;
+  color: black;
 
+}
+
+.enroll {
+  margin-top: 10px;
+}
+
+.location {
+  font-size: 15px;
+}
+
+.image {
+  margin-left: 200px;
 }

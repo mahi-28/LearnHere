@@ -5,7 +5,7 @@ img {
   margin-right: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .content{
@@ -18,15 +18,23 @@ img {
   cursor: pointer;
   border: 2px solid lightblue;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .course_content {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+  margin-left: 50px;
   margin-top: 20px;
   font-size: larger;
   font-family: cursive;
 
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.crs_name {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
