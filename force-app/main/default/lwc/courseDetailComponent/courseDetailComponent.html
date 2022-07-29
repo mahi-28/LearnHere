@@ -34,7 +34,15 @@
     </div>
       <div class="enroll">
         <lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="6" large-device-size="4">
-          <lightning-button variant="brand" label="Enroll Now" title="Enroll Now" onclick={handleRSVP}></lightning-button>
+          <template if:true={__showEnrollButton}>
+            <lightning-button variant="brand" label="Enroll Now" title="Enroll Now" onclick={handleEnroll}></lightning-button>
+            <p class="Button">{__showEnrollButton}</p>
+          </template>
+          <template if:false={__showEnrollButton}>
+            <lightning-button variant="brand" label="Login to Enroll" title="Login" onclick={handleLoginRedirect}></lightning-button>
+            <p class="Button">{__showEnrollButton}</p>
+          </template>
+          
         </lightning-layout-item>
       </div>
     </div>

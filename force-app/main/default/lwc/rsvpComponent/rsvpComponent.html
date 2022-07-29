@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <lightning-layout multiple-rows>
+      <lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="12" large-device-size="12">
+        <lightning-input type="text" variant="standard" onchange={handleChange} name="Name" label="Full Name" required></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="12" large-device-size="12">
+        <lightning-input type="email" variant="standard" onchange={handleChange} name="Email__c" label="Email" required></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="12" large-device-size="12">
+        <lightning-input type="text" variant="standard" onchange={handleChange} name="Title__c" label="Title" required></lightning-input>
+      </lightning-layout-item>
+    </lightning-layout>
+    <div class="slds-var-p-around_small">
+      <lightning-button variant="destructive" label="Cancel" title="Cancel" onclick={handleCancel}></lightning-button>
+
+      <lightning-button variant="brand" label="RSVP" title="RSVP" onclick={handleRsvp}></lightning-button>
+    </div>
+  </div>   
+</template>
