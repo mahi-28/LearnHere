@@ -4,6 +4,7 @@ import fetchCourseDetails from '@salesforce/apex/courseDetailLWCService.fetchCou
 import fetchTrainerDetails from '@salesforce/apex/courseDetailLWCService.fetchTrainerDetails';
 import fetchUserName from '@salesforce/apex/UserUtility.fetchUserName';
 import { NavigationMixin } from 'lightning/navigation';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class CourseDetailComponent extends NavigationMixin(LightningElement) {
 
@@ -95,7 +96,12 @@ export default class CourseDetailComponent extends NavigationMixin(LightningElem
 
    handleEnroll() {
      console.log('output', this.courseId);
+     this.__showModal = true;
 
+  }
+
+  handleCancel() {
+    this.__showModal = false;
   }
   handleContactUs() {
 
@@ -110,6 +116,16 @@ export default class CourseDetailComponent extends NavigationMixin(LightningElem
   }
   // this[NavigationMixin.Navigate](navigationTarget);
   alert('Login to enroll');
+  }
+
+  handleEnrollSuccess() {
+    this.__showModal = false;
+    this.dispatchEvent(new ShowToastEvent({
+        title: 'Success',
+        message: 'You have successfully enrolled for the course!',
+        variant: 'success'
+    }));
+
   }
 
 }
